@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+}
+/* Propiedades Glovales*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to top, #dfe9f3 0%, var(--blanco) 50%);
+}
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    text-align: center;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+/* Tipografias */
+h1{
+    font-size: 3.8rem; /* 1rem -> 10px */
+}
+h2{
+    font-size: 2.8rem;
+    text-align: center;
+}
+h3{
+    font-size: 1.8rem;
+    text-align: center;
+}
+.titulo{
+    text-align: center;
+}
+
+.titulo span{
+    font-size: 2rem
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* Utilidades */
+.w-100{
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .w-100{
+        width: auto;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.alinear-derecha {
+    justify-content: flex-end;
+}
+
+.marg-top-1rem {
+    bottom: 5px;
+}
+
+/* Navegacion Principal */
+.nav-bg {
+    background-color: var(--secundario) ;
+}
+.navegacion-principal{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+@media (min-width: 740px) {
+    .navegacion-principal{
+        flex-direction: row;
+    }
+
+}
+
+.navegacion-principal a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    color: var(--primario);
+
+}
+/* Imagen de fondo de la primera sección */
+.hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0,0,0, .7);
+    width: 100%;
+    height: 100%;
+
+    /* Alinear Vertical y Horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);
+}
+
+.contenido-hero .ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+.sombra {
+    box-shadow: 0px 6px 16px 4px rgba(0,0,0,0.6);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border: .5rem;
+}
+
+/* Scroll Snap (con que hagas un poco de scroll se va a la proxima sección) */
+.servicios,
+.navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+@media (min-width: 768px) {
+    .servicios{
+        display: grid;
+        /* repeat(numero de columnas, porcentaje / fracción etc. ) */
+        grid-template-columns: repeat(3, 1fr); /* 33.3%*/
+        column-gap: 10rem;
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+/* Contacto */
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%); /** Utilizar el valor más pequño**/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+
+.formulario fieldset {
+    border-style: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+    /* Seleccionamos solo el tercer div que tiene la clase .campo el cual es mensaje */
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+        grid-column: 1 / 3;
+    }
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.enviar .boton {
+    width: 100%;
+}
+
+.campo textarea {
+    height: 20rem;
+}
+
+footer {
+    text-align: center;
+}
