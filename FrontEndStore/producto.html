@@ -25,18 +25,21 @@
 
         <div class="camisa">
             <img src="img/3.jpg" alt="Imagen del Producto" class="camisa__imagen">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur aliquam dolor repudiandae asperiores optio tempora quibusdam obcaecati rerum deserunt quae.</p>
-            
-            <form class="formulario">
-                <select>
-                    <option disabled selected>-- Seleccionar Talla --</option>
-                    <option>XS</option>
-                    <option>M</option>
-                    <option>XL</option>
-                </select>
-                <input type="number" placeholder="Cantidad" min="1">
-                <input type="submit" value="Agregar al Carrito">
-            </form>
+
+            <div class="camisa__contenido">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur aliquam dolor repudiandae asperiores optio tempora quibusdam obcaecati rerum deserunt quae.</p>
+                
+                <form class="formulario">
+                    <select class="formulario__campo">
+                        <option disabled selected>-- Seleccionar Talla --</option>
+                        <option>XS</option>
+                        <option>M</option>
+                        <option>XL</option>
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1">
+                    <input class="formulario__submit" type="submit" value="Agregar al Carrito">
+                </form>
+            </div>
         </div>
     </main>
 
