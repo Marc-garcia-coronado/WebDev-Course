@@ -20,3 +20,10 @@
         @content;
     }
 }
+
+@mixin grid($gap, $n-columns) {
+    display: grid;
+    grid-template-columns: repeat($n-columns, 1fr);
+    gap: $gap;
+    @content;
+}
