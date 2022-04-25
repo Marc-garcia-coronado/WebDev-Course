@@ -7,9 +7,7 @@
         img {
             
         }
-        @include m.grid(5rem, 2) {
-        
-        }
+        @include m.grid(2, 5rem);
     }
         
     
@@ -32,7 +30,4 @@
         font-weight: 700;
     }
 
-    p {
-
-    }
 }
