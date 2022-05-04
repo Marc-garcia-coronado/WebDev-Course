@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
     iniciarApp();
 });
 
@@ -85,7 +85,7 @@ function mostrarImagen(id) {
     cerrarModal.classList.add("btn-cerrar");
     cerrarModal.onclick = function() {
         overlay.remove();
-        body.classList.remove("fijar-body")
+        body.classList.remove("fijar-body");
     }
     overlay.appendChild(cerrarModal);
 

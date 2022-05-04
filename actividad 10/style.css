@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&family=Poiret+One&family=Poppins:wght@100;400;700&display=swap');
+
+/* Reset */
+html{
+    margin: 0;
+    padding: 0;
+    
+}
+h1 {
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+h2 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+
+    font-family: 'Poiret One', cursive;
+}
+
+body {
+    /* font-family: 'Poppins', sans-serif;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Norican', cursive; */
+    margin: 0;
+}
+header {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.872);
+    padding: 50px 0px;
+}
+.contenedor {
+    width: 800px;
+    margin: 0px auto;
+}
+
+h1{
+    font-family: 'Poiret One', cursive;
+    font-weight: 800;
+    font-size: 3em;
+    color: white;
+}
+h1 span{
+    color: yellow;
+}
+
+.small{
+    font-size: 0.4em;
+}
+
+nav ul{
+    padding-left: 0px;
+    text-align: right;
+}
+
+nav li{
+    display: inline-block;
+    margin: 20px;  
+    list-style: none; 
+}
+
+nav a{
+    color: rgb(0, 187, 255);
+    text-decoration: none;
+    font-family:'Poppins', sans-serif;
+}
+
+.bg-negro {
+    background-color: rgba(7, 7, 7, 0.925);
+}
+.contenedor-main {
+    padding-bottom: 50px;
+}
+
+.contenedor-main--p{
+    width: 600px;
+    margin: 0px auto;
+    padding: 70px 0;
+}
+.contenedor-main--p p {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#font-family-norican {
+    font-family: 'Norican', cursive;
+    color: rgb(0, 187, 255);
+}
+
+.align-right {
+    text-align: end;
+}
+
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+.contenedor-main img {
+    width: 800px;
+}
+
+
+.photos img {
+    width: 182.5px;
+    height: 400px;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    padding-bottom: 50px;
+}
+
+.color-yellow {
+    color: rgba(255, 255, 0, 0.749);
+}
