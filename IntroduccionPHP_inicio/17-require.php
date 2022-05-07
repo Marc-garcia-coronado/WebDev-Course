@@ -12,7 +12,7 @@ function usuarioAutenticado(bool $autenticado): ?string {
 
 
 
-$usuario = usuarioAutenticado(true);
+$usuario = usuarioAutenticado(autenticado: true);
 echo $usuario;
 
 
