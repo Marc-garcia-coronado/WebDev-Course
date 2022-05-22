@@ -1,0 +1,16 @@
+.footer {
+    background-color: $grisOscuro;
+    margin-bottom: 0px;
+
+    .contenido-footer {
+        padding-top: calc($separacion / 2);
+    }
+
+    .copyright {
+        color: $blanco;
+    }
+
+    p {
+        margin: 0;
+    }
+}
