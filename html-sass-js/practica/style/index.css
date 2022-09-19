@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&family=Poiret+One&family=Poppins:wght@100;400;700&display=swap');
+
+    /* font-family: 'Poppins', sans-serif;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Norican', cursive; */
+
+/* Reset */
+
+html,h1,h2,h3,p,span,body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Poiret One', cursive;
+    font-weight: 800;
+    color: white;
+}
+
+h1 {
+    display: flex;
+    align-self: flex-start;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h1 span {
+    color: yellow;
+}
+
+.little {
+    font-size: 0.5em;
+    margin-top: 23px;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.contenedor {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.bg-dark-blue {
+    background-color: #232630;
+}
+
+.contenedor-header {
+    padding: 50px 0px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    width: 500px;
+    align-self: flex-end;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: rgb(0, 187, 255);
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+a:hover {
+    color: white;
+}
+
+.bg-black {
+    background-color: rgba(12, 14, 21, 0.92)
+}
+
+.contenedor-lorem {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    width: 600px;
+    margin: 0 auto;
+}
+
+.contenedor-lorem p {
+    font-size: 1.2em;
+}
+
+.contenedor-lorem a {
+    font-family: 'Norican', cursive;
+    font-size: 1.2em;
+    text-align: end;
+}
+
+.contenedor-foto1 img{
+    width: 800px;
+}
+
+.contenedor-photos {
+    padding: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.contenedor-imagenes {
+    display: flex;
+    gap: 25px;
+
+}
+
+.contenedor-imagenes img {
+    width: 182.5px;
+    height: 400px;
+    opacity: .8;
+}
+
+.contenedor-imagenes img:hover {
+    opacity: 1;
+}
+
+.contenedor-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yellow {
+    color: rgb(248, 248, 77);
+}
+
+.contenedor-services p {
+    font-size: 1.2em;
+}
+
+.contenedor-lorem-services {
+    padding: 0px 20px;
+    border-left: 10px solid #232630;
+    border-right: 10px solid #232630;
+}
+
+.contenedor-services li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: white;
+    list-style: circle;
+}
+
+.contenedor-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+.contenedor-team h2 {
+    margin-top: 100px;
+}
+
+.personal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.persona img {
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px black;
+}
+
+.persona {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+
+    border: 1px solid yellow;
+    border-radius: 5px;
+    
+    padding: 75px 50px;
+}
+
+footer p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+footer span {
+    color: yellow;
+}

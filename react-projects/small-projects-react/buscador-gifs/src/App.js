@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import {Formik, Form, Field} from "formik"
+
+import Header from "./Components/Header";
+import "./App.css"
+
+const APIKey = "2nOCFUNPU0RlveD0evnPloJWTnLxPBXb&q"
+const URLSearchAPI = "https://api.giphy.com/v1/gifs/search?api_key="
+
+const Nav = ({children}) => {
+  return (
+    [children]
+  )
+}
 
 function App() {
+  
+  const [images, setImages] = useState([])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+    <header>
+      <div className="contenedor-header">
+        <Header />
+        <Nav>
+          <Formik
+            initialValues={{search: ""}}
+            onSubmit={async values => {
+              const response = await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${APIKey}=${values.search}&limit=20&offset=0&rating=g&lang=es`)
+              const data = await response.json()
+              console.log(data.data)
+              const dataMapped = data.data.map(e => e.images.fixed_height_downsampled && e.images)
+              setImages(dataMapped)
+            }}
+            >
+            <Form>
+              <Field name="search" className="input" placeholder="Escribe el GIF que quieras buscar"/>
+            </Form>
+          </Formik>
+        </Nav>
+      </div>
+    </header>
+    <section className="contenedor-section">
+      <ul>
+
+      </ul>
+    </section>
+   </div>
   );
 }
 
