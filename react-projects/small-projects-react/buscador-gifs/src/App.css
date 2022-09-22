@@ -26,10 +26,52 @@ header {
 }
 
 .input {
-  width: 300px;
-  height: 20px;
+  width: 20rem;
+  height: 2rem;
 
   border: 2px solid rgba(0, 0, 0, 0.587);
   border-radius: 5px;
   padding-left: 5px;
+}
+
+.contenedor-article {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 50px;
+}
+
+.contenedor-article article {
+  padding: 5px;
+  width: 370px;
+  height: 370px;
+  right: 0%;
+
+  box-shadow: 0px 0px 10px rgb(49, 49, 49);
+  border-radius: 15px;
+  opacity: 0.9;
+
+  cursor: pointer;
+  
+  transition: width 1s, height 1s, right 1s;
+}
+.contenedor-article article:hover {
+  opacity: 1;
+  box-shadow: 0px 0px 20px rgb(49, 49, 49);
+  width: 430px;
+  height: 430px;
+  right: -15%;
+}
+
+.contenedor-article img {
+  
+  border-radius: inherit;
+  width: inherit;
+  height: inherit;
+}
+
+.centrar {
+  width: 1000px;
+  margin: 0 auto;
 }
